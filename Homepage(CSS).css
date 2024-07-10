@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-image: url("https://wallpapercave.com/wp/dmnu4vq.jpg");
+	background-position: center;
+	background-size: cover;
+    background-attachment: fixed;
+	position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 2px;
+    padding-top: 10px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-family: poppins;
+}
+nav ul li button
+{
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color: white;
+}
+nav ul li a:hover
+{
+    color: white;
+}
+a
+{
+    text-decoration: none;
+    color: palevioletred;
+    font-size: 28px;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+  }
+  .dropdown-menu {
+	position: relative;
+	display: inline-block;
+  width: 150px;
+  }
+  .menu-btn {
+    background-color:transparent;
+    color: white;
+    padding: 23px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: poppins;
+    border: none;
+  }
+  .links,.links-hidden{
+	display: inline-block;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	background: transparent;
+  color: black;
+  }
+  .links-hidden{
+	display: block;
+  }
+  .links{
+	display: inline-block;
+  }
+  .links-hidden:hover,.links:hover {
+	background: transparent;
+  }
+  .dropdown-menu:hover .menu-content {
+	display: block;
+  }
+  .dropdown-menu:hover .menu-btn {
+	background-color:transparent;
+  }
+  .banner-area h2 {
+	font-family: poppins;
+	font-size: 75px;
+	margin: 0 0 25px;
+	color: white;
+}
+.banner-area p{
+	font-family: poppins;
+	margin: 0 0 25px;
+	color: whitesmoke;
+	margin-left: 15px;
+}
+.banner-area{ 
+	size: 200px 200px;
+	align-items: left;
+	justify-content: center;
+	font-size: 2vw;
+	margin-left: 10px;
+	margin-top: 130px;
+}
+.btn-donate {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+}
+.btn-donate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+}
+.btn-donate:hover::before {
+  scale: 3;
+}
+.btn-donate:hover {
+  color: rgb(193, 163, 98);
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgb(193, 163, 98);
+}
+.btn-donate:active {
+  scale: 1;
+}

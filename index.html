@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiat-Currency Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="index(CSS).css">
+</head>
+<body>
+  <nav>
+    <div class="container2">
+      <img src="logo.png" height="70px" width="70px">
+      <a href="HomePage.html">Home</a>
+      <div class="dropdown-menu">
+        <button class="menu-btn">Services</button>
+        <div class="menu-content">
+          <a class="links-hidden" href="Crypto Currency.html"> Crypto Currency Converter</a> 
+        </div>
+      </div>
+      <a href="Contact Us.html">Contact</a>
+      <a href="Feedback Page.html" style="font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri' , 'Trebuchet MS', 'sans-serif';">Feedback</a>
+    </div>
+  </nav> 
+  <main>
+    <div class="flex_container">
+      <div class="form">
+        <div class="flex_container1">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Fiat-Currency Converter</legend>
+          <div class="flex_container2">
+          <div>
+          <div class="amount" style="width: 510px; margin-top: 20px;">
+            <label for="amount"><span class="form__labelText">Enter Amount:</span>
+            <input type="number" style="margin-left: 10px;" class="inputfield" name="amount" id="amount" min="0" placeholder="Enter Amount">
+            </label>
+            <button class="button" style="width: 70px; height: 40px; padding: 0px; margin-left: 10px;" onclick="ClearFields()">
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">Reset</span></button>
+          </div>
+          <div class="form__container">
+            <label for="from"><span class="form__labelText">From:</span>
+            </label>
+            <input list="from_currency" class="inputfield" name="from_currency" id="from" value="USD">
+              <datalist id="from_currency">
+                <option value="AED">AED-Arab Emirates Dirham</option>
+                <option value="AUD">AUD-Australian Dollar</option>
+                <option value="BRL">BRL-Brazilian Real</option>
+                <option value="CAD">CAD-Canadian Dollar</option>
+                <option value="CHF">CHF-Swiss Franc</option>
+                <option value="CNY">CNY-Chinese Yuan Renminbi</option>
+                <option value="COP">COP-Colombian Peso</option>
+                <option value="CZK">CZK-Czech Koruna</option>
+                <option value="EGP">EGP-Egyptian Pound</option>
+                <option value="EUR">EUR-Euro</option>
+                <option value="GBP">GBP-Great British Pound</option>
+                <option value="HKD">HKD-Hong Kong Dollar</option>
+                <option value="INR">INR-Indian Rupee</option>
+                <option value="JPY">JPY-Japenese Yen</option>
+                <option value="KRW">KRW-Korean won</option>
+                <option value="MXN">MXN-Mexican Peso</option>
+                <option value="MYR">MYR-Malaysian Ringgit</option>
+                <option value="NOK">NOK-Norwegian Krone</option>
+                <option value="NZD">NZD-New Zealand Dollar</option>
+                <option value="PHP">PHP-Phillippine Peso</option>
+                <option value="RON">RON-Romanian New Leu</option>
+                <option value="RUB">RUB-Russian Ruble</option>
+                <option value="SAR">SAR-Saudi Riyal</option>
+                <option value="SEK">SEK-Swedish Krona</option>
+                <option value="SGD">SGD-Singapore Dollar</option>
+                <option value="THB">THB-Thai Baht</option>
+                <option value="UAH">UAH-Ukrainian Hryvnia</option>
+                <option value="USD">USD-United States Dollar</option>
+                <option value="VND">VND-Vietnamese Dong</option>
+                <option value="ZAR">ZAR-South African Rand</option>
+              </datalist>
+            </div>
+          <div>
+            <button class="Swap_Button" onclick="swap()">
+            <span class="fas fa-exchange-alt"></span>
+            </button>
+          </div>
+          <div class="form__container">
+            <label for="to"><span class="form__labelText">To:</span>
+            </label>
+            <input list="to_currency" class="inputfield" name="to_currency" id="to" value="INR">
+            <datalist id="to_currency">
+              <option value="AED">AED-Arab Emirates Dirham</option>
+              <option value="AUD">AUD-Australian Dollar</option>
+              <option value="BRL">BRL-Brazilian Real</option>
+              <option value="CAD">CAD-Canadian Dollar</option>
+              <option value="CHF">CHF-Swiss Franc</option>
+              <option value="CNY">CNY-Chinese Yuan Renminbi</option>
+              <option value="COP">COP-Colombian Peso</option>
+              <option value="CZK">CZK-Czech Koruna</option>
+              <option value="EGP">EGP-Egyptian Pound</option>
+              <option value="EUR">EUR-Euro</option>
+              <option value="GBP">GBP-Great British Pound</option>
+              <option value="HKD">HKD-Hong Kong Dollar</option>
+              <option value="INR">INR-Indian Rupee</option>
+              <option value="JPY">JPY-Japenese Yen</option>
+              <option value="KRW">KRW-Korean won</option>
+              <option value="MXN">MXN-Mexican Peso</option>
+              <option value="MYR">MYR-Malaysian Ringgit</option>
+              <option value="NOK">NOK-Norwegian Krone</option>
+              <option value="NZD">NZD-New Zealand Dollar</option>
+              <option value="PHP">PHP-Phillippine Peso</option>
+              <option value="RON">RON-Romanian New Leu</option>
+              <option value="RUB">RUB-Russian Ruble</option>
+              <option value="SAR">SAR-Saudi Riyal</option>
+              <option value="SEK">SEK-Swedish Krona</option>
+              <option value="SGD">SGD-Singapore Dollar</option>
+              <option value="THB">THB-Thai Baht</option>
+              <option value="UAH">UAH-Ukrainian Hryvnia</option>
+              <option value="USD">USD-United States Dollar</option>
+              <option value="VND">VND-Vietnamese Dong</option>
+              <option value="ZAR">ZAR-South African Rand</option>
+            </datalist>
+          </div>
+            <button id="saveHistory" class="history_format"><i class="fa fa-history"></i></button>
+            <button id="openFavoriteForm" class="button" style="width: 150px; padding: 10px;">
+              <span class="transition"></span>
+              <span class="gradient"></span>
+              <span class="label">Save Currency</span></button>  
+            <button id="openHistoryForm" class="button" onclick="convert()">Convert<span class="button-border"></span></button>
+            <div id="historyFormPopup" class="hidden">
+              <h2><b><u>History Data</u></b></h2>
+              <p id="historyMessage"></p>
+              <ul id="historyList" style="color:white"></ul>
+              <button id="closeHistoryForm">Close</button>
+            </div>
+            <button class="button" style="padding:10px;" onclick="showContent()">
+              <span class="transition" ></span>
+              <span class="gradient"></span>
+              <span class="label">Historical Data</span>
+            </button>  
+            <button id="saveFavorite" class="favorite_Button"><i class="material-icons">favorite</i></button>
+            <div id="favoriteFormPopup" class="hidden1">
+              <h2><b><u>Favorites</u></b></h2>
+              <p id="favoriteMessage"></p>
+              <ul id="favoritesList" style="color:white"></ul>
+              <button id="closeFavoriteForm">Close</button>
+            </div>
+            <center>
+            <div id="result1" class="result23"></div>
+            <div id="result" class="result23"></div>
+            <div id="date" class="result23"></div>
+            </center>
+          </div>
+          <div id="graph" style="border-left-style: dotted; border-left-color: white; ">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <canvas id="myChart" style="width:100%; max-width:380px; height:300px; background: white; border-radius: 10px" class="graph"></canvas>
+          </div>
+            </div>
+            
+    </fieldset>
+    <div>
+      <div class="historical" style="display: none;">
+          <center><h3><u>Historical Prices</u></h3></center>
+          <label id="lfrom12"><span class="form__labelText" style="width: 40px;">From:</span>
+          <input type="text" id="from12" class="inputfield"></label>
+          <label id="lto12"><span class="form__labelText" style="width: 40px;">To:</span>
+          <input type="text" id="to12" class="inputfield"></label>
+          <label id="ldate12"><span class="form__labelText" style="width: 40px;">Date:</span>
+          <input type="date" id="input12" class="inputfield"></label>
+          <button id="data1" class="button" onclick="fetchData()" style="margin-left: 30px;">Show</button>
+          <center><div id="data" style="color: white;"></div></center>
+        </div>
+        </div>
+    </div>
+    </div>   
+    <legend class="heading">Top News</legend>
+
+      <div class="container">
+        <ul class="news-list" id="newsList"></ul>
+      </div>
+      </div>
+  </main>
+</body>
+<script src="index(Js).js"></script>
+</html>

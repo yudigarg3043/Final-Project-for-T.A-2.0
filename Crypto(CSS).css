@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("https://site.surveysparrow.com/wp-content/uploads/2023/05/1.png");
+  }
+  .container2{
+    display:flex;
+    flex-direction: row;
+    height: 80px;
+    width: 200px;
+    padding: 10px;
+  }
+  .container2 a{
+    padding: 12px;
+    margin: 10px;
+  }
+  .dropdown-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-menu:hover .menu-content {
+    display: block;
+  }
+  .menu-btn {
+    background-color:transparent;
+    color: white;
+    padding: 23px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: poppins;
+    border: none;
+    text-transform: uppercase;
+  }
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 1;
+  }
+  .links,.links-hidden{
+    display: inline-block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .links-hidden{
+    display: block;
+  }
+  nav {
+    width: 100%;
+    left: 10px;
+  }
+  nav a {
+    font-size: 20px;
+    margin-right: 7px;
+    margin-left: 2px;
+  }
+  .flex_container{
+    display: flex;
+  }
+  .form {
+    margin: 0 auto;
+    margin-right: 50px;
+    margin-left: 30px;
+  }
+  .form__fieldset {
+    border: 4px solid white;
+    border-radius: 10px;
+    margin-top: 120px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-left: 50px;
+    max-width: 1100px;
+  }
+  .form__legend {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: white;
+     color: black;
+  }
+  .inputfield {
+    max-width: 190px;
+    background-color: ivory;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    font-size: 16px;
+  }
+  #amount:focus {
+    animation: rotateShadow 2s infinite linear;
+  }
+  .form__labelText {
+    font-size: 20px;
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+  }   
+.button {
+--green: white;
+font-size: 15px;
+padding: 0.7em 2.7em;
+letter-spacing: 0.06em;
+position: relative;
+font-family: inherit;
+border-radius: 0.6em;
+overflow: hidden;
+transition: all 0.3s;
+line-height: 1.4em;
+border: 2px solid var(--green);
+background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+color: var(--green);
+box-shadow: inset 0 0 10px rgba(112, 203, 225, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+.button:hover {
+color: #30ade3;
+box-shadow: inset 0 0 10px rgba(112, 203, 225, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+.button:before {
+content: "";
+position: absolute;
+left: -4em;
+width: 4em;
+height: 100%;
+top: 0;
+transition: transform .4s ease-in-out;
+background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+}
+.button:hover:before {
+transform: translateX(15em);
+}
+  .form__container {
+    padding: 10px;
+  }
+  .flex_container2{
+  display: flex;
+  flex-direction: row;
+}
+  .form__result {
+    padding: 20px;
+  }
+  .form__labelText {
+    font-size: 20px;
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  .form__container--submit {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form__submit {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 20px;
+  }
+  .form__resultContainer {
+    border-top: 2px double white;
+  }
+  .form__result {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .form__resultContent {
+    display: inline-block;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: crimson;
+  }
+  nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: poppins;
+    margin-right: 20px;
+  }
+  .Swap_Button{
+    align-content: center;
+    rotate: 90deg;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: ivory;
+    color: navy;
+    position: absolute;
+    inset-inline-start: 15%;
+    transform: translate(-50%, -50%);
+  }
+  .Swap_Button:hover{
+    background-color: navy;
+    color: ivory;
+  }
+  ul{
+    list-style: none;
+  }
+  .list{
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .list-items{
+    padding: 10px 5px;
+  }
+  .hidden{
+    display: none;
+  }
+  .history_format{
+    align-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: ivory;
+    color: navy;
+    margin-top: 22px;
+    font-size: 24px;
+    position: relative;
+    top: 5px;
+  }
+  .history_format:hover{
+    background-color: navy;
+    color: ivory;
+  }
+  #historyFormPopup {
+    position: fixed;
+    width: 400px;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1; 
+  }
+  #historyList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  #historyList li {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  #closeHistoryForm {
+    width: 10em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge #fafdfe;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #closeHistoryForm:hover::before, #closeHistoryForm:hover::after {
+    transform: scale(0)
+  }
+  #closeHistoryForm:hover {
+    box-shadow: inset 0px 0px 25px #959596;
+  }
+  #historyFormPopup{
+    background: #0d0844;
+    background: linear-gradient(to right, #0e0253, #0d044f, #0d054c,#0d0748,#0d0844);    
+  }
+  #historyFormPopup h2{
+    color: white;
+  }
+  @keyframes rotateShadow {
+    0% {
+      box-shadow: -2px -2px 0px 0px #949295, 2px 2px 0px 0px #5a5959;
+    }
+    25% {
+      box-shadow: -2px 2px 0px 0px #949295, 2px -2px 0px 0px #5a5959;
+    }
+    50% {
+      box-shadow: 2px 2px 0px 0px #949295, -2px -2px 0px 0px #5a5959;
+    }
+    75% {
+      box-shadow: 2px -2px 0px 0px #949295, -2px 2px 0px 0px #5a5959;
+    }
+    100% {
+      box-shadow: -2px -2px 0px 0px #949295, 2px 2px 0px 0px #5a5959;
+    }
+  }
+  .hidden1 {
+      display: none;
+  }
+  #favoriteFormPopup {
+    position: fixed;
+    width: 400px;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1; 
+  }
+  #favoritesList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  #favoritesList li {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  #closeFavoriteForm {
+    width: 10em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge #fafdfe;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #closeFavoriteForm:hover::before, #closeFavoriteForm:hover::after {
+    transform: scale(0)
+  }
+  #closeFavoriteForm:hover {
+    box-shadow: inset 0px 0px 25px #959596;
+  }
+  #favoriteFormPopup{
+    background: #0d0844;
+    background: linear-gradient(to right, #0e0253, #0d044f, #0d054c,#0d0748,#0d0844);    
+  }
+  #favoriteFormPopup h2{
+    color: white;
+  }
+  #result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  #result1 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  .favorite_Button{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    color: navy;
+    font-size: 36px;
+    position: relative;
+    top: 5px;
+  }
+.favorite_Button:hover{
+    background-color: navy;
+    color: ivory;
+  }
+  .historical{
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    position: relative;
+    outline: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    max-height: 350px;
+  }
+  .historical h3{
+    color: white;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 430px;
+    margin: 0 auto;
+    max-height: 70vh;
+    overflow-y: hidden;
+    margin-top: 70px;
+    margin-right: 0px;
+    backdrop-filter: blur(10px);
+}
+.news-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    animation: scroll 180s infinite linear;
+}
+@keyframes scroll{
+    0%{
+      transform: translateY(0);
+    }
+    100%{
+      transform: translateY(-100%);
+    }
+  }
+.news-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.news-item:last-child {
+    border-bottom: none;
+}
+.news-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.news-item img {
+width: 100px; 
+height: auto; 
+margin-right: 10px;
+}
+.heading{
+  font-size: 36px;
+  font-family: poppins;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: fixed;
+  color: white;
+  margin-left: 1150px;
+}  
+#graph{
+max-width: 600px;
+  padding-left: 10px;
+  padding-right: 0px; 
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  max-height: 350px;
+}

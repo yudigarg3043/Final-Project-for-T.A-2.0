@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto-Currency Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="Crypto(CSS).css">
+</head>
+<body>
+  <nav>
+    <div class="container2">
+      <img src="logo.png" height="70px" width="70px">
+      <a href="HomePage.html">Home</a>
+      <div class="dropdown-menu">
+        <button class="menu-btn">Services</button>
+        <div class="menu-content">
+          <a class="links-hidden" href="index.html"> Fiat-Currency Converter</a> 
+        </div>
+      </div>
+      <a href="Contact Us.html">Contact</a>
+      <a href="Feedback Page.html">Feedback</a>
+    </div>
+  </nav> 
+  <main>
+    <div class="flex_container">
+      <div class="form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Crypto-Currency Converter</legend>
+          <div class="flex_container2">
+          <div>
+          <div class="amount" style="width: 510px; margin-top: 20px;">
+            <label for="amount"><span class="form__labelText">Enter Amount:</span>
+            <input type="number" style="margin-left: 10px;" class="inputfield" name="amount" id="amount" min="0" placeholder="Enter Amount">
+            </label>
+            <button class="button" style="width: 70px; height: 40px; padding: 0px; margin-left: 10px;" onclick="ClearFields()">
+            <span class="transition"></span>
+            <span class="gradient"></span>
+            <span class="label">Reset</span></button>
+          </div>
+          <div class="form__container">
+            <label for="from"><span class="form__labelText">From:</span>
+            </label>
+            <input list="from_currency" class="inputfield" name="from_currency" id="from" value="BTC">
+              <datalist id="from_currency">
+                <option value="BTC">BTC-Bitcoin</option>
+            <option value="ETH">ETH-Ethereum </option>
+            <option value="ADA">ADA-Cardano</option>
+            <option value="BNB">BNB-Binance</option>
+            <option value="SOL">SOL-Solana</option>
+            <option value="XRP">XRP-XRP</option>
+            <option value="DOT">DOT-Polkadot</option>
+            <option value="LINK">LINK-Chainlink</option>
+            <option value="LTC">LTC-Litecoin</option>
+            <option value="BCH">BCH-Bitcoin cash</option>
+            <option value="XLM">XLM-Stellar</option>
+            <option value="USDT">USDT-Tether</option>
+            <option value="USDC">USDC-USD Coin</option>
+            <option value="DOGE">DOGE-DogeCoin</option>
+            <option value="AVAX">AVAX-Avalanche</option>
+            <option value="UNI">UNI-Uniswap</option>
+            <option value="ATOM">ATOM-Cosmos</option>
+            <option value="ALGO">ALGO-Algorand</option>
+            <option value="XTZ">XTZ-Tezos</option>
+            <option value="FIL">FIL-FileCoin</option>
+            <option value="TRX">TRX-Tron</option>
+            <option value="THETA">THETA-Theta Network</option>
+            <option value="NEO">NEO-Neo</option>
+            <option value="EOS">EOS-EOS</option>
+            <option value="MATIC">MATIC-Polygon</option>
+            <option value="BSV">BSV-Bitcoin SV</option>
+            <option value="AAVE">AAVE-Aave</option>
+            <option value="XMR">XMR-Monero</option>
+            <option value="KSM">KSM-Kusama</option>
+            <option value="CRO">CRO-Crypto.com Coin</option>
+            <option value="DAI">DAI-Dai</option>
+            <option value="MKR">MKR-Maker</option>
+            <option value="BTG">BTG-Bitcoin Gold</option>
+            <option value="SUSHI">SUSHI-Sushiswap</option>
+            <option value="COMP">COMP-Compound</option>
+            <option value="DASH">DASH-Dash</option>
+            <option value="ZEC">ZEC-Zcash</option>
+            <option value="SNX">SNX-Synthetix</option>
+            <option value="DCR">DCR-Decred</option>
+            <option value="QTUM">QTUM-Qtum</option>
+            <option value="HNT">HNT-Helium</option>
+            <option value="EGLD">EGLD-Elrond</option>
+            <option value="HT">HT-Huobi Token</option>
+            <option value="CHZ">CHZ-Chiliz</option>
+            <option value="GRT">GRT-The Graph</option>
+            <option value="FTT">FTT-Ftx Token</option>
+            <option value="CRV">CRV-Curve DAO Token</option>
+            <option value="XEM">XEM-Xem</option>
+            <option value="CELO">CELO-Celo</option>
+            <option value="ONT">ONT-Ontology</option>
+            <option value="COMP">COMP-Compound</option>
+            <option value="VET">VET-VeChain</option>
+            <option value="MIOTA">MIOTA-Miota</option>
+              </datalist>
+            </div>
+          <div>
+            <button class="Swap_Button" onclick="swap()">
+            <span class="fas fa-exchange-alt"></span>
+            </button>
+          </div>
+          <div class="form__container">
+            <label for="to"><span class="form__labelText">To:</span>
+            </label>
+            <input list="to_currency" class="inputfield" name="to_currency" id="to" value="EUR">
+            <datalist id="to_currency">
+                <option value="AED">AED-Arab Emirates Dirham</option>
+                <option value="AUD">AUD-Australian Dollar</option>
+                <option value="BRL">BRL-Brazilian Real</option>
+                <option value="CAD">CAD-Canadian Dollar</option>
+                <option value="CHF">CHF-Swiss Franc</option>
+                <option value="CNY">CNY-Chinese Yuan Renminbi</option>
+                <option value="COP">COP-Colombian Peso</option>
+                <option value="CZK">CZK-Czech Koruna</option>
+                <option value="EGP">EGP-Egyptian Pound</option>
+                <option value="EUR">EUR-Euro</option>
+                <option value="GBP">GBP-Great British Pound</option>
+                <option value="HKD">HKD-Hong Kong Dollar</option>
+                <option value="INR">INR-Indian Rupee</option>
+                <option value="JPY">JPY-Japenese Yen</option>
+                <option value="KRW">KRW-Korean won</option>
+                <option value="MXN">MXN-Mexican Peso</option>
+                <option value="MYR">MYR-Malaysian Ringgit</option>
+                <option value="NOK">NOK-Norwegian Krone</option>
+                <option value="NZD">NZD-New Zealand Dollar</option>
+                <option value="PHP">PHP-Phillippine Peso</option>
+                <option value="RON">RON-Romanian New Leu</option>
+                <option value="RUB">RUB-Russian Ruble</option>
+                <option value="SAR">SAR-Saudi Riyal</option>
+                <option value="SEK">SEK-Swedish Krona</option>
+                <option value="SGD">SGD-Singapore Dollar</option>
+                <option value="THB">THB-Thai Baht</option>
+                <option value="UAH">UAH-Ukrainian Hryvnia</option>
+                <option value="USD">USD-United States Dollar</option>
+                <option value="VND">VND-Vietnamese Dong</option>
+                <option value="ZAR">ZAR-South African Rand</option>
+              </datalist>
+          </div>
+            <center><button id="saveHistory" class="history_format"><i class="fa fa-history"></i></button>
+            <button id="openFavoriteForm" class="button" style="width: 150px; padding: 10px;">
+              <span class="transition"></span>
+              <span class="gradient"></span>
+              <span class="label">Save Currency</span></button>  
+            <button id="openHistoryForm" class="button" onclick="convert()">Convert<span class="button-border"></span></button>
+            <div id="historyFormPopup" class="hidden">
+              <h2><b><u>History Data</u></b></h2>
+              <p id="historyMessage"></p>
+              <ul id="historyList" style="color:white"></ul>
+              <button id="closeHistoryForm">Close</button>
+            </div>
+            <button id="saveFavorite" class="favorite_Button"><i class="material-icons">favorite</i></button>
+            <div id="favoriteFormPopup" class="hidden1">
+              <h2><b><u>Favorites</u></b></h2>
+              <p id="favoriteMessage"></p>
+              <ul id="favoritesList" style="color:white"></ul>
+              <button id="closeFavoriteForm">Close</button>
+            </div>
+            <div id="result1"></div>
+            <div id="result"></div>
+        </center>
+            </div>
+            <div id="graph" style="border-left-style: dotted; border-left-color: white; ">
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+              <canvas id="myChart" style="width:100%;max-width:380px;height:265px;background: white; border-radius: 10px;" class="graph"></canvas>
+            </div>
+          </div>
+    </fieldset>
+    </div>
+    <legend class="heading">Top News</legend>   
+    <div class="container">
+    <ul class="news-list" id="newsList"></ul>
+    </div>
+  </div>
+  </main>
+</body>
+<script src="Crypto.js"></script>
+</html>

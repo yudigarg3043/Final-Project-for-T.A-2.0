@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="Feedback Page CSS.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2><u>Feedback Form</u></h2>
+        <form onsubmit="return feedback1()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Write Your Full Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Write Your email here">
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Give Your Feedback"></textarea>
+
+            <button type="button" onclick="showFeedbackMessage('😄', 'Awesome!')">😄</button>
+            <button type="button" onclick="showFeedbackMessage('😐', 'Okay')">😐</button>
+            <button type="button" onclick="showFeedbackMessage('😢', 'Not Good')">😢</button>
+
+            <div id="feedback-message" style="margin-top: 10px;"></div>
+            <form action="Home Page.html">
+                <button onclick="window.location.href='HomePage.html';">SUBMIT FEEDBACK</button>
+            </form>
+            </form> 
+    </div>
+    <script>
+        function showFeedbackMessage(emoji, message) {
+            const feedbackMessage = document.getElementById('feedback-message');
+            feedbackMessage.innerHTML = `<p>${emoji} ${message}</p>`;
+        }
+        function feedback1() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var feedback = document.getElementById('feedback').value;
+
+            if(name == "") {
+                alert("Please fill Name Section")
+                return false
+            }
+            if(email == "") {
+                alert("Please fill Email Section")
+                return false
+            }
+            if(feedback == "") {
+                alert("Please give your Feedback")
+                return false
+            }
+            else{
+                alert("from Submitted")
+            }
+        }
+    </script>
+</body>
+</html>
